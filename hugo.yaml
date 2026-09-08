@@ -29,3 +29,7 @@ menu:
     - name: Experience
       pageRef: /experience
       weight: 4
+
+    - name: CV
+      url: /files/Xiaokang_Qu_CV.pdf
+      weight: 5
