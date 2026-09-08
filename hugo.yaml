@@ -1,0 +1,31 @@
+baseURL: "https://github.com/Yokelison/xiaokangqu.github.io/"
+title: "Xiaokang Qu"
+languageCode: "en-us"
+theme: "hugo-flex"
+
+params:
+  color: "#315A72"
+  width: "48rem"
+  divider: ""
+  footer: "© 2026 Xiaokang Qu"
+  summaries: false
+  schema: true
+  opengraph: true
+
+menu:
+  main:
+    - name: About
+      pageRef: /
+      weight: 1
+
+    - name: Publications
+      pageRef: /publications
+      weight: 2
+
+    - name: Research & Projects
+      pageRef: /projects
+      weight: 3
+
+    - name: Experience
+      pageRef: /experience
+      weight: 4
