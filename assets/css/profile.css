@@ -1,0 +1,60 @@
+.Profile {
+  display: grid;
+  grid-template-columns: 13.75rem minmax(0, 1fr);
+  align-items: start;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.Profile-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.Profile-description > p:first-child {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.Profile-description > p:last-child {
+  margin-bottom: 0;
+}
+
+.ContactLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.ContactLinks-link {
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem;
+  text-decoration: none;
+}
+
+.ContactLinks-link:hover {
+  opacity: 0.7;
+}
+
+.ContactLinks-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+  flex: none;
+}
+
+@media (max-width: 36rem) {
+  .Profile {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .Profile-photo {
+    width: 13.75rem;
+  }
+}

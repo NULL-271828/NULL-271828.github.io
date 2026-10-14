@@ -1,0 +1,20 @@
+{{ resources.Get "css/projects.css" | .Page.Store.SetInMap "css" "projects" }}
+
+{{ $collection := .Get "collection" }}
+<ol class="ProjectList">
+  {{ range index .Page.Params $collection }}
+    <li class="ProjectItem">
+      <article>
+        <h3 class="Project-title">{{ .title }}</h3>
+        <div class="Project-meta">
+          <span class="Project-role">{{ .role }}</span>
+          <time class="Project-period">{{ .period }}</time>
+        </div>
+        <p class="Project-description">{{ .description }}</p>
+        {{ with .amount }}
+          <p class="Project-amount">Grant amount: {{ . }}</p>
+        {{ end }}
+      </article>
+    </li>
+  {{ end }}
+</ol>

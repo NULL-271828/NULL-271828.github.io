@@ -1,0 +1,51 @@
+.ExperienceSection {
+  margin: 1.5rem 0;
+}
+
+.ExperienceSection-title {
+  font-size: 1.2rem;
+  margin: 0 0 0.4rem;
+}
+
+.ExperienceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ExperienceItem {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  column-gap: 1.25rem;
+  padding: 0.65rem 0;
+}
+
+.Experience-period {
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.Experience-title {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.Experience-organization {
+  font-size: 0.95rem;
+  margin: 0.15rem 0 0;
+}
+
+.Experience-description {
+  font-size: 0.95rem;
+  margin: 0.2rem 0 0;
+}
+
+@media (max-width: 36rem) {
+  .ExperienceItem {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.15rem;
+  }
+}

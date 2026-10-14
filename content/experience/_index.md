@@ -1,15 +1,51 @@
 ---
 title: "Experience"
+experience:
+  - section: "Education"
+    entries:
+      - period: "2025–Present"
+        title: "D.Eng. Student in Network and Information Security"
+        organization: "University of Science and Technology of China (USTC)"
+        location: ""
+      - period: "2023–2025"
+        title: "Master's Student in Electronic Information"
+        organization: "University of Science and Technology of China (USTC)"
+        location: ""
+      - period: "2018–2022"
+        title: "B.E. in Internet of Things Engineering"
+        organization: "Hainan University"
+        location: ""
+  - section: "Industry Experience"
+    entries:
+      - period: "Dec. 2023–May 2024"
+        title: "Algorithm Engineer Intern"
+        organization: "Data Space Research Institute (idata)"
+        location: "Hefei"
+  - section: "Scholarships"
+    entries:
+      - period: "2023"
+        title: "Master’s Academic Scholarship — Second Class"
+        organization: "University of Science and Technology of China (USTC)"
+        location: ""
+      - period: "2024"
+        title: "Master’s Academic Scholarship — First Class"
+        organization: "University of Science and Technology of China (USTC)"
+        location: ""
+      - period: "2025"
+        title: "Doctoral Academic Scholarship — Second Class"
+        organization: "University of Science and Technology of China (USTC)"
+        location: ""
+      - period: "2026"
+        title: "Doctoral Academic Scholarship — First Class"
+        organization: "University of Science and Technology of China (USTC)"
+        location: ""
+  - section: "Awards & Honors"
+    entries:
+      - period: "2026"
+        title: "Second Prize"
+        organization: "China Youth Science and Technology Innovation Challenge"
+        location: ""
+        description: "Next-Generation Information Technology (Student Track)."
 ---
 
-## Education
-
-**Ph.D. in XXX**  
-University of XXX  
-202X–Present
-
-## Research Experience
-
-**Research Assistant**  
-XXX Lab  
-202X–Present
+{{< experience-list >}}

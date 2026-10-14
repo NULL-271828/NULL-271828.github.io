@@ -1,0 +1,21 @@
+{{ resources.Get "css/experience.css" | .Page.Store.SetInMap "css" "experience" }}
+
+{{ range .Page.Params.experience }}
+  <section class="ExperienceSection">
+    <h2 class="ExperienceSection-title">{{ .section }}</h2>
+    <ol class="ExperienceList">
+      {{ range .entries }}
+        <li class="ExperienceItem">
+          <div class="Experience-period">{{ .period }}</div>
+          <div class="Experience-details">
+            <h3 class="Experience-title">{{ .title }}</h3>
+            <p class="Experience-organization">{{ .organization }}{{ with .location }}, {{ . }}{{ end }}</p>
+            {{ with .description }}
+              <p class="Experience-description">{{ . }}</p>
+            {{ end }}
+          </div>
+        </li>
+      {{ end }}
+    </ol>
+  </section>
+{{ end }}

@@ -22,7 +22,7 @@ menu:
       pageRef: /publications
       weight: 2
 
-    - name: Research & Projects
+    - name: Projects
       pageRef: /projects
       weight: 3
 
@@ -31,5 +31,5 @@ menu:
       weight: 4
 
     - name: CV
-      url: /files/Xiaokang_Qu_CV.pdf
+      url: /files/xiaokang_qu_cv.pdf
       weight: 5

@@ -1,0 +1,128 @@
+.PublicationList {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.Publication {
+  border-bottom: 0.0625rem solid color-mix(in srgb, currentColor 25%, transparent);
+  padding: 1rem 0 1rem 0.25rem;
+}
+
+.Publication:last-child {
+  border-bottom: 0;
+}
+
+.Publication-content--withImage {
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 11rem minmax(0, 1fr);
+}
+
+.Publication-figureLink {
+  color: inherit;
+  display: block;
+}
+
+.Publication-figure {
+  aspect-ratio: 16 / 9;
+  background: #fff;
+  border: 0.0625rem solid color-mix(in srgb, currentColor 20%, transparent);
+  border-radius: 0.2rem;
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+.Publication-figureLink:hover {
+  opacity: 0.85;
+}
+
+.Publication-title {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+}
+
+.Publication-authors,
+.Publication-venue {
+  margin: 0.2rem 0;
+}
+
+.Publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.65rem;
+}
+
+.Publication-link {
+  color: inherit;
+  display: inline-flex;
+  padding: 0.2rem;
+  text-decoration: none;
+}
+
+.Publication-link:hover {
+  opacity: 0.7;
+}
+
+.Publication-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+.PatentList {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.Patent {
+  border-bottom: 0.0625rem solid color-mix(in srgb, currentColor 25%, transparent);
+  padding: 1rem 0 1rem 0.25rem;
+}
+
+.Patent:last-child {
+  border-bottom: 0;
+}
+
+.Patent-title {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+}
+
+.Patent-inventors,
+.Patent-details,
+.Patent-status {
+  margin: 0.2rem 0;
+}
+
+.Patent-link {
+  color: inherit;
+  display: inline-flex;
+  margin-top: 0.45rem;
+  padding: 0.2rem;
+  text-decoration: none;
+}
+
+.Patent-link:hover {
+  opacity: 0.7;
+}
+
+.Patent-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+@media (max-width: 36rem) {
+  .Publication-content--withImage {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .Publication-figureLink {
+    max-width: 20rem;
+  }
+}

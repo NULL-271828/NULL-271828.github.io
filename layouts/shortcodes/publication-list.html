@@ -1,0 +1,80 @@
+{{ resources.Get "css/publications.css" | .Page.Store.SetInMap "css" "publications" }}
+
+<ol class="PublicationList">
+  {{ range .Page.Params.publications }}
+    {{ $publication := . }}
+    <li class="Publication">
+      <article class="Publication-content{{ with .image }} Publication-content--withImage{{ end }}">
+        {{ with .image }}
+          <a class="Publication-figureLink" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="View figure for {{ $publication.title }}" title="View figure">
+            <img class="Publication-figure" src="{{ . }}" alt="{{ $publication.image_alt }}" loading="lazy" decoding="async">
+          </a>
+        {{ end }}
+        <div class="Publication-details">
+          <h2 class="Publication-title">{{ .title }}</h2>
+          <p class="Publication-authors">
+            {{- range $index, $author := .authors -}}
+              {{- if $index }}, {{ end -}}
+              {{- if eq $author "Xiaokang Qu" -}}
+                <strong>{{ $author }}</strong>
+              {{- else -}}
+                {{ $author }}
+              {{- end -}}
+            {{- end -}}
+          </p>
+          <p class="Publication-venue">
+            <em>{{ .venue }}</em>{{ with .details }}, {{ . }}{{ end }} ({{ .year }}){{ with .status }}. {{ . }}{{ end }}.
+          </p>
+          <nav class="Publication-links" aria-label="Resources for {{ .title }}">
+          {{ with .links.paper }}
+            <a class="Publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Paper" title="Paper">
+              <svg class="Publication-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+              </svg>
+            </a>
+          {{ end }}
+          {{ with .links.pdf }}
+            <a class="Publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="PDF" title="PDF">
+              <svg class="Publication-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                <path d="M4.603 14.087a.8.8 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.7 7.7 0 0 1 1.482-.645 20 20 0 0 0 1.062-2.227 7.3 7.3 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a11 11 0 0 0 .98 1.686 5.8 5.8 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.86.86 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.7 5.7 0 0 1-.911-.95 11.7 11.7 0 0 0-1.997.406 11.3 11.3 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.8.8 0 0 1-.58.029m1.379-1.901q-.25.115-.459.238c-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361q.016.032.026.044l.035-.012c.137-.056.355-.235.635-.572a8 8 0 0 0 .45-.606m1.64-1.33a13 13 0 0 1 1.01-.193 12 12 0 0 1-.51-.858 21 21 0 0 1-.5 1.05zm2.446.45q.226.245.435.41c.24.19.407.253.498.256a.1.1 0 0 0 .07-.015.3.3 0 0 0 .094-.125.44.44 0 0 0 .059-.2.1.1 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a4 4 0 0 0-.612-.053zM8.078 7.8a7 7 0 0 0 .2-.828q.046-.282.038-.465a.6.6 0 0 0-.032-.198.5.5 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822q.036.167.09.346z"/>
+              </svg>
+            </a>
+          {{ end }}
+          {{ with .links.github }}
+            <a class="Publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+              <svg class="Publication-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+              </svg>
+            </a>
+          {{ end }}
+          {{ with .links.zenodo }}
+            <a class="Publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Zenodo" title="Zenodo">
+              <svg class="Publication-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </a>
+          {{ end }}
+          {{ with .links.slides }}
+            <a class="Publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Slides" title="Slides">
+              <svg class="Publication-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M5 6a.5.5 0 0 0-.496.438l-.5 4A.5.5 0 0 0 4.5 11h3v2.016c-.863.055-1.5.251-1.5.484 0 .276.895.5 2 .5s2-.224 2-.5c0-.233-.637-.429-1.5-.484V11h3a.5.5 0 0 0 .496-.562l-.5-4A.5.5 0 0 0 11 6zm2 3.78V7.22c0-.096.106-.156.19-.106l2.13 1.279a.125.125 0 0 1 0 .214l-2.13 1.28A.125.125 0 0 1 7 9.778z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+              </svg>
+            </a>
+          {{ end }}
+          {{ with .links.video }}
+            <a class="Publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Video" title="Video">
+              <svg class="Publication-icon" viewBox="0 0 16 16" aria-hidden="true">
+                <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+              </svg>
+            </a>
+          {{ end }}
+          </nav>
+        </div>
+      </article>
+    </li>
+  {{ end }}
+</ol>
