@@ -1,0 +1,30 @@
+{{ resources.Get "css/presentations.css" | .Page.Store.SetInMap "css" "presentations" }}
+
+<section class="ExperienceSection">
+  <h2 class="ExperienceSection-title">Presentations</h2>
+  <ol class="PresentationList">
+    {{ range .Page.Params.presentations }}
+      <li class="PresentationItem">
+        <article>
+          <h3 class="Presentation-title">{{ .title }}</h3>
+          <div class="Presentation-meta">
+            <span class="Presentation-type">{{ .type }}</span>
+            <span class="Presentation-event-name">{{ .event }}</span>
+          </div>
+          <div class="Presentation-event">
+            <time class="Presentation-period">{{ .period }}</time>
+            {{ with .location }}<span>{{ . }}</span>{{ end }}
+            {{ with .pdf }}
+              <a class="Presentation-link" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="View presentation PDF" title="Presentation PDF">
+                <svg class="Presentation-icon" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                </svg>
+                <span>PDF</span>
+              </a>
+            {{ end }}
+          </div>
+        </article>
+      </li>
+    {{ end }}
+  </ol>
+</section>

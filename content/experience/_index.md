@@ -46,6 +46,15 @@ experience:
         organization: "China Youth Science and Technology Innovation Challenge"
         location: ""
         description: "Next-Generation Information Technology (Student Track)."
+# type 可选：Oral、Poster、Spotlight
+presentations:
+  - period: "Oct. 25–27, 2024"
+    title: "A Food-Web Robustness Evaluation Metric under Species Extinction"
+    type: "Oral"
+    event: "The 20th National Conference on Complex Networks"
+    location: "Nanjing, China"
+    pdf: "/files/slides/nanjing-complex-networks-food-web-20241026.pdf"
 ---
 
 {{< experience-list >}}
+{{< presentation-list >}}
