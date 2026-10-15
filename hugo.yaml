@@ -11,8 +11,6 @@ params:
   summaries: false
   schema: true
   opengraph: true
-  js:
-    - "js/goatcounter.js"
 
 menu:
   main:

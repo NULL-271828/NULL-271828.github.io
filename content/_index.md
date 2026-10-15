@@ -11,5 +11,3 @@ D.Eng. Student in University of Science and Technology of China
 
 My research focuses on reliable and controllable AI, particularly large language and vision-language models, retrieval-augmented generation, and evidence-driven evaluation. My current interests include tool-using agents and multi-agent systems for translating complex requirements into verifiable outputs, with applications to communication network design. I also study the structure and functional robustness of complex networks.
 {{< /profile >}}
-
-{{< visitor-stats >}}
