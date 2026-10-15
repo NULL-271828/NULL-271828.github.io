@@ -1,0 +1,97 @@
+.VisitorStats {
+  border-top: 1px solid currentColor;
+  margin: 3rem 0 1rem;
+  padding-top: 1.25rem;
+}
+
+.VisitorStats-heading {
+  align-items: baseline;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.VisitorStats-heading h2 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.VisitorStats-updated,
+.VisitorStats-note {
+  color: #666;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.VisitorStats-content {
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1.65fr) minmax(12rem, 1fr);
+  margin-top: 1rem;
+}
+
+.VisitorStats-map {
+  background: #f5f8fa;
+  border-radius: 0.35rem;
+  min-height: 16rem;
+  padding: 0.5rem;
+}
+
+.VisitorStats-map svg {
+  display: block;
+  height: auto;
+  max-height: 22rem;
+  width: 100%;
+}
+
+.VisitorStats-map path {
+  fill: #dce5ea;
+  stroke: #fff;
+  stroke-width: 0.6;
+  transition: fill 160ms ease;
+}
+
+.VisitorStats-map path[data-visitors] {
+  fill: #315a72;
+}
+
+.VisitorStats-summary {
+  min-width: 0;
+}
+
+.VisitorStats-total {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0 1.5rem 1rem 0;
+}
+
+.VisitorStats-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.VisitorStats-label {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.VisitorStats-country-list {
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.VisitorStats-country-list li {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.VisitorStats-note {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 42rem) {
+  .VisitorStats-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
