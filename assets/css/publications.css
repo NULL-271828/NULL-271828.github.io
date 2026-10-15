@@ -99,10 +99,16 @@
   margin: 0.2rem 0;
 }
 
+.Patent-status {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
 .Patent-link {
   color: inherit;
   display: inline-flex;
-  margin-top: 0.45rem;
   padding: 0.2rem;
   text-decoration: none;
 }
