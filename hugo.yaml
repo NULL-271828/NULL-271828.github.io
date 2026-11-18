@@ -3,6 +3,13 @@ title: "Xiaokang Qu"
 languageCode: "en-us"
 theme: "hugo-flex"
 
+module:
+  mounts:
+    - source: static
+      target: static
+      files:
+        - "! files/publications/**.pdf"
+
 params:
   color: "#315A72"
   width: "48rem"

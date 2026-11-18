@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title description">
+  <title id="title">Reliable AI for Communication Network Design</title>
+  <desc id="description">Doctoral research agenda: topology generation, functional robustness, and local optimization.</desc>
+  <rect width="640" height="360" fill="#f7fafc"/>
+  <rect width="8" height="360" fill="#315a72"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="36" y="77" fill="#244559" font-size="50" font-weight="700">Reliable AI</text>
+    <text x="36" y="122" fill="#315a72" font-size="29">Communication Network Design</text>
+    <g text-anchor="middle" font-size="25" font-weight="600">
+      <rect x="36" y="166" width="180" height="116" rx="8" fill="#e3edf4"/>
+      <text x="126" y="214" fill="#244559">Topology</text>
+      <text x="126" y="249" fill="#244559">Generation</text>
+      <rect x="230" y="166" width="180" height="116" rx="8" fill="#e4efec"/>
+      <text x="320" y="214" fill="#2e5550">Functional</text>
+      <text x="320" y="249" fill="#2e5550">Robustness</text>
+      <rect x="424" y="166" width="180" height="116" rx="8" fill="#e9edf3"/>
+      <text x="514" y="214" fill="#3d4d65">Local</text>
+      <text x="514" y="249" fill="#3d4d65">Optimization</text>
+    </g>
+    <text x="36" y="329" fill="#526775" font-size="22">Doctoral research agenda</text>
+  </g>
+</svg>

@@ -1,6 +1,15 @@
 ---
 title: "Publications"
 publications:
+  - title: "Reliable AI for Communication Network Design: Topology Generation, Functional Robustness, and Optimization"
+    image: "/images/publications/aaai-dc.svg"
+    image_alt: "Doctoral research agenda for reliable AI in communication network design: topology generation, functional robustness, and local optimization"
+    authors:
+      - "Xiaokang Qu"
+    venue: "AAAI Doctoral Consortium"
+    date: "2026-11"
+    status: "Accepted"
+
   - title: "Remote Sensing Retrieval-Augmented Generation: Bridging Remote Sensing Imagery and Comprehensive Knowledge with a Multimodal Dataset and Retrieval-Augmented Generation Model"
     image: "/images/publications/rs-rag.png"
     image_alt: "RS-RAG framework overview"
@@ -13,12 +22,11 @@ publications:
       - "Xiang Li"
       - "Hui Lin"
     venue: "IEEE Geoscience and Remote Sensing Magazine"
-    year: 2026
+    date: "2026-01-12"
     details: "vol. 14, no. 2, pp. 85–103"
-    status: ""
+    status: "Published online"
     links:
       paper: "https://ieeexplore.ieee.org/abstract/document/11339476"
-      pdf: "/files/publications/rs-rag.pdf"
       github: "https://github.com/CongcongWen1208/RS-RAG"
       zenodo: ""
       slides: ""
@@ -35,12 +43,11 @@ publications:
       - "Tianlong Fan"
       - "Linyuan Lü"
     venue: "Annual Computer Security Applications Conference (ACSAC)"
-    year: 2026
+    date: "2026-09"
     details: ""
     status: "Accepted"
     links:
       paper: "https://arxiv.org/abs/2608.13389"
-      pdf: "/files/publications/topointent.pdf"
       github: "https://github.com/NULL-271828/TopoIntent"
       zenodo: ""
       slides: ""
@@ -53,12 +60,11 @@ publications:
       - "Xiaokang Qu"
       - "Yiting Lin"
     venue: "arXiv"
-    year: 2026
+    date: "2026-08-11"
     details: "arXiv:2608.10584"
     status: "Preprint"
     links:
       paper: "https://arxiv.org/abs/2608.10584"
-      pdf: "/files/publications/hexeval.pdf"
       github: "https://github.com/NULL-271828/HexEval"
       zenodo: ""
       slides: ""
@@ -73,12 +79,11 @@ publications:
       - "Tianlong Fan"
       - "Linyuan Lü"
     venue: "bioRxiv"
-    year: 2026
+    date: "2026-08-28"
     details: ""
     status: "Preprint"
     links:
       paper: "https://www.biorxiv.org/content/10.64898/2026.08.27.747453v1.abstract"
-      pdf: "/files/publications/functional-robustness-food-webs.pdf"
       github: "https://github.com/NULL-271828/MEE-DAR-CI-MVSS-Code"
       zenodo: ""
       slides: ""
